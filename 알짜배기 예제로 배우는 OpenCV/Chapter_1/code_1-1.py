@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Oct 10 01:15:20 2021
+
+@author: UFO
+"""
+
+import cv2
+
+img_color = cv2.imread("버드나무.jpg", cv2.IMREAD_COLOR)
+
+if img_color is None:
+    print("이미지 파일을 읽을 수 없습니다.")
+    exit(1)
+    
+cv2.namedWindow('Color')
+cv2.imshow('Color', img_color)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()

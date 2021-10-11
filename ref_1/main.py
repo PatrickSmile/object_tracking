@@ -242,9 +242,9 @@ current_file_path = os.path.dirname(os.path.realpath(__file__))
 cascade = cv.CascadeClassifier(cv.samples.findFile(current_file_path + "\haarcascade_frontalface_alt.xml"))
 
 
-# cap = cv.VideoCapture('test.avi')
+cap = cv.VideoCapture('output.avi')
 
-cap = cv.VideoCapture(0)
+# cap = cv.VideoCapture(0)
 
 while True:
 
