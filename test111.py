@@ -14,5 +14,10 @@ for i in range(30):
 
 # test 3_jihye
 
+<<<<<<< HEAD
 #지혜 수정
 import cv2
+=======
+# 여기서 부터 희원 수정함2 2021-10-17
+print("낄낄")
+>>>>>>> f85ec0bcf84f529cca94e1b58f5fccd91e202911
