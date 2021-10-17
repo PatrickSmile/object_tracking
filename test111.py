@@ -14,3 +14,5 @@ for i in range(30):
 
 # test 3_jihye
 
+#지혜 수정
+import cv2
