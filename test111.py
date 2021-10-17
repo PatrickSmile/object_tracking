@@ -7,6 +7,10 @@ Created on Sun Oct 17 21:23:02 2021
 
 #test 1_ Heewon
 
+
 # 여기서 부터 희원 수정함 2021-10-17
 for i in range(30):
     print("hello world")
+
+# test 3_jihye
+
