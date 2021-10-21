@@ -8,7 +8,7 @@ def mouse_callback(event, x, y, flags, param):
     # 마우스 왼쪽 버튼을 누를 때마다 좌표를 리스트에 저장합니다.
     if event == cv.EVENT_LBUTTONDOWN:
 
-        print("(%d, %d" %(x,y))
+        print("(%d, %d)" %(x,y))
 
         point_list.append((x,y))
         cv.circle(img_color, (x,y), 3, (0,0,255), -1)
