@@ -23,4 +23,30 @@ cv2.namedWindow('original')
 cv2.setMouseCallback('original', mouse_callback)
 
 # 사용할 이미지를 불러옵니다.
-img_color
+img_color = cv2.imread('test.jpg')
+img_original = img_color
+
+# 반복하면서 마우스 클릭으로 네점을 지정하도록 합니다.
+while(True):
+
+    cv2.imshow("original", img_color)
+
+    height, width = img_color.shape[:2]
+
+    # spacebar를 누르면 루프에서 빠져나옵니다.
+    if cv2.waitKey(1) == 32:
+        break
+
+# 퍼스펙티브 변환 후 영역으로 사각 영역을 지정합니다.
+dst = np.float32([[0,0], [width,0], [0,height], [width,height]])
+
+# 퍼스펙티브 변환 행렬을 생성합니다.
+M = cv2.getPerspectiveTransform(src, dst)
+
+# 이미지에 퍼스펙티브 변환을 적용합니다.
+img_result = cv2.warpPerspective(img_original, M, (width,height))
+
+# 결과를 보여줍니다.
+cv2.imshow("result1", img_result)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
